@@ -1,32 +1,72 @@
-# Coding Interview: Rock Paper Scissors
+# Rock Paper Scissors Game
 
-## The Task
+This is a Kotlin-based implementation of the Rock, Paper, Scissors game where two players compete in multiple rounds. One player always chooses Rock, and the other makes random choices. The game simulates 100 rounds, evaluates the result (Win, Draw, Lose) for each round, and calculates the total number of wins and draws.
 
-Write a program that plays multiple rounds of Rock, Paper, Scissors (https://en.wikipedia.org/wiki/Rock-paper-scissors) and shows the final results of the game.The code should at least provide the minimal functional requirements listed below, have high test coverage and adhere to common clean code rules. 
+## Requirements
 
-KEEP IT SIMPLE - remember: we're not looking for a full-blown business application, but a basis for discussion and further development. A simple text output for the result will do.
+- One player (Player A) always chooses Rock.
+- The other player (Player B) chooses randomly.
+- The game should play 100 rounds.
+- The application should evaluate the result of each round and display the total number of wins, losses, and draws for each player.
 
-Minimal functional requirements:
-* One player should always play randomly, the other should always choose rock. No user interaction should be required (i.e. no reading from stdin and waiting for a user interaction)
-* The application should play 100 rounds of the game
-* The application should evaluate the game logic, i.e. the result (e.g. WIN, DRAW, LOSE) of two actions (e.g. ROCK, PAPER, SCISSOR) competing against each other
-* The application should calculate at least the number of wins for each player and the number of draws.
- 
+## Features
 
-## Technical requirements
+- Simulates 100 rounds of the game.
+- Calculates and prints the number of wins, losses, and draws for both players.
+- Written in Kotlin with a focus on clean code and test-driven development (TDD).
+- High test coverage for the game logic and player behavior.
 
-Language: Kotlin, tests in a language and with a framework of your choice
-Approach: ideally "test-driven
-Build files (e.g. for Gradle or Maven) should be included in the project
- 
-[Fork this repository](https://github.com/cocharge/coding-interview/fork) and push changes to your forked personal repository.
+## Project Structure
 
-The output of the program should be like the following:
+- `Player` class: Represents a player in the game, with a name, game stats and a method to make moves.
+- `RockPlayer`: A subclass of `Player` that always chooses Rock.
+- `RandomPlayer`: A subclass of `Player` that makes a random choice.
+- `Game`: A class to simulate the game and evaluate the result.
+- `Move`: An enum to represent the possible moves (Rock, Paper, Scissors).
+- `Result`: An enum to represent the result of a round (Win, Lose, Draw).
 
+## How to Run
+
+To run the game Follow these steps:
+
+1. **Clone the repository** to your local machine (if you haven't already):
+
+2. **Build the project** and run the game using Gradle:
+
+This will simulate 100 rounds of the game and print the results.
+
+### Command to Run the Game
+
+If you want to run the game directly from the command line (on a Unix-based system like macOS or Linux), you can use:
+
+```bash
+./gradlew run
 ```
-"Player A wins 31 of 100 games"
-"Player B wins 37 of 100 games"
-"Draws: 32 of 100 games"
+
+## Running Tests
+
+The project is equipped with unit tests for the game logic and player behavior. To run all tests, use the following command:
+
+```bash
+./gradlew test
 ```
 
-Good luck!
+## Output Example
+```
+Player A wins 31 of 100 games
+Player B wins 37 of 100 games
+Draws: 32 of 100 games
+```
+## Development
+
+The project follows a test-driven development approach. You can add new tests or modify existing ones by editing the test files in the src/test directory.
+
+## Technologies Used
+
+- Kotlin
+- JUnit 5 (for testing)
+- Gradle (build tool)
+
+
+
+
