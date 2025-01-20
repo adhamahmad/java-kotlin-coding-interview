@@ -18,7 +18,7 @@ This is a Kotlin-based implementation of the Rock, Paper, Scissors game where tw
 
 ## Project Structure
 
-- `Player` class: Represents a player in the game, with a name, game stats and a method to make moves.
+- `Player` class: Represents a player in the game, with a name, game stats (wins, losses, draws) and a method to make moves.
 - `RockPlayer`: A subclass of `Player` that always chooses Rock.
 - `RandomPlayer`: A subclass of `Player` that makes a random choice.
 - `Game`: A class to simulate the game and evaluate the result.
